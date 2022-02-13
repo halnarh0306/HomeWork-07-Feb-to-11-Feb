@@ -1,0 +1,157 @@
+"Reverse each word
+-->>
+package Feb_07;  //"Reverse each word
+import java.util.Scanner;
+public class one {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String b="";
+		String c="";
+		System.out.println("Enter a String ");
+		String a=sc.nextLine();
+		
+		
+		for(int i=a.length()-1;i>=0;i--)
+		{
+			b=b+a.charAt(i);
+		
+			
+		}
+		System.out.println(b);
+		
+
+	}
+
+}
+
+02)Compress the string
+--->>>
+package Feb_07;
+
+import java.util.Scanner;
+
+public class second {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		 
+		String a=sc.nextLine();
+		
+		for(int i=0;i<a.length();i++)
+		{
+			if(a.charAt(i)==' ')
+			{
+				continue;
+			}
+			else
+				System.out.print(a.charAt(i));
+		}
+		
+
+	}
+
+}
+
+03)Highest Occuring character
+----->>>>
+package Feb_11;   //Highest Occuring character
+
+import java.util.Scanner;
+import java.util.Scanner;
+
+
+public class firstone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a name");
+		String a=sc.nextLine();
+		
+		char max=maxCharIs(a);
+		
+		System.out.println("Highest Occuring character= "+max);
+
+	}
+	
+	public static char maxCharIs(String name)
+	{
+		int[] count=new int[256];
+		
+	
+		  
+		for(int i=0;i<name.length();i++)
+		{
+		        count[name.charAt(i)]++;
+		}
+		
+		int max=-1;
+		 char result=' ';
+		 
+		 for(int i=0;i<name.length();i++)
+		 {
+			 if(max<count[name.charAt(i)])
+			 {
+				 max=count[name.charAt(i)];
+				 
+				 result=name.charAt(i);
+			 }
+		 }
+		 
+		 return result;
+	}
+
+}
+
+
+-->>>>>>>>
+
+04)If strings are equal or not
+--->>
+package Feb_07;
+
+public class fourthone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a="Hanmant";
+		String b="Hanmant";
+		
+	  String c="";
+	  
+	  c=a.equals(b)?"string are same":"Strings are not same";
+	  
+	  System.out.println(c);
+		  
+		  
+
+	}
+
+}
+
+
+
+05)check permutation"
+
+--->>>
+package Feb_07; //permutation
+
+public class lastone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String a="abc";
+		
+		for(int i=0;i<a.length()-1;i++)
+		{
+			for(int j=0;j<a.length()-1;j++)
+				System.out.println(a.substring(i,j+1));
+		}
+
+	}
+
+}

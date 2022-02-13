@@ -1,0 +1,202 @@
+01) max product of two integers where  all elements are postive
+
+--->>>
+package Feb_11;
+//findinding maximum product of a array
+
+import java.util.Scanner;
+public class firstone {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+		int[] arr= {10,40,80,60,20};
+		 int product=maxProduct(arr);
+		 
+		 System.out.println(" max product is "+product);
+		 
+		 
+
+	}
+	
+	private static int maxProduct( int[] ar)
+	{
+		
+		for(int i=0;i<ar.length;i++)
+		{
+			for(int j=i+1;j<ar.length;j++)
+			{
+				int temp;
+				if(ar[i]>ar[j])
+				{
+					temp=ar[i];
+					ar[i]=ar[j];
+					ar[j]=temp;
+				}
+			}
+		}
+	      for(int i=0;i<ar.length;i++)
+	    	  System.out.print(ar[i]+" ");
+	      
+	      System.out.println();
+	      
+	      int max=ar[ar.length-1];
+	      int maxbutlast=ar[ar.length-2];
+	      
+	      int c=max*maxbutlast;
+	      
+	      return c;
+	}
+
+}
+
+02) write a program to find a array is unique or not
+
+--->>>
+
+package Feb_11;
+import java.util.Scanner;
+public class FindingUnquieArrayOrNOt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the arryas length");
+		int arrlen=sc.nextInt();
+		
+		int[] arr=new int[arrlen];
+		for(int i=0;i<arrlen;i++)
+		{
+		   System.out.println("the arrys number "+(i+1)+":");
+		     arr[i]=sc.nextInt();
+		}
+		    
+		   for(int i=0;i<arr.length;i++)
+		   {
+			   System.out.print(arr[i]+" ");
+		   }
+		   System.out.println();
+		    
+		  String a=isunique(arr);
+		  System.out.println(a);
+		  
+		  
+		   
+	}
+	
+	public static String isunique (int[] arr1)
+	{
+		String ab="Arrays is unquie";
+		for(int i=0;i<arr1.length;i++)
+		{
+			for(int j=0;j<i;j++)
+			{
+				if(arr1[i]==arr1[j])
+				{
+					ab="Arrays is Not Unquie";
+					break;
+				}
+			}
+		}
+		
+		return ab;
+	}
+	
+
+}
+
+03) Your are given two integer  arrays.Write  a program to check if they are permutation of each other.
+---->>>
+package Feb_11;
+import java.util.*;
+public class PermutationOfArrays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+		 int[] arr= {1,2,4,5,6};
+		 int[] arr1= {2,1,4,5,6};
+		 
+		 boolean a=isPermutation(arr,arr1);
+		
+		System.out.println(a);
+	}
+	
+	public static boolean isPermutation(int[] arr3,int[] arr4)
+	{
+		 int len=arr3.length;
+		 int len2=arr4.length;
+		 
+		 
+		 if(len!=len2)
+		 {
+			 return false;
+		 }
+		 Arrays.sort(arr3);
+		 Arrays.sort(arr4);
+		 
+		 for(int i=0;i<len;i++)
+		 {
+			 if(arr3[i]!=arr4[i])
+			 {
+				 return false;
+			 }
+		 }
+		 
+		 return true;
+	
+	}
+
+}
+
+04) Write a Function called middle that takes a list and return a new list that contains all but the first
+    and last elements.
+
+ package Feb_11;
+import java.util.*;
+public class middleFuction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the array length");
+		int len=sc.nextInt();
+		
+		int[] arr=new int[len];
+		for(int i=0;i<len;i++)
+		{
+			System.out.println("enter number "+(i+1)+":");
+			arr[i]=sc.nextInt();
+			
+		}
+		
+		System.out.println(Arrays.toString(arr));
+		
+	   middle(arr);
+		
+	}
+	
+	public static void middle(int[] arr2)
+	{
+		 int len=arr2.length;
+		int[] arr3=new int[len-2];
+		
+		for(int i=0;i<arr3.length;i++)
+		{
+			
+			  arr3[i]=arr2[i+1];
+		}
+		
+		System.out.println(Arrays.toString(arr3));
+		
+	}
+
+}
+
+
+
+

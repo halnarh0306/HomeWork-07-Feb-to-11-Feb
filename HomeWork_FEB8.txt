@@ -1,0 +1,134 @@
+01)"-- Write a method which returns a string by removing special charaters( &,$,:,+,@)
+   spaces from the string  
+   Input: ""Geekster-The%school:where+you@code:your-success$stories""
+   Output : ""eekster The school where you code your success stories
+--->>>
+
+package Feb_08;
+  /*  Write a method which returns a string by removing special charaters( &,$,:,+,@)
+   spaces from the string  
+   Input: ""Geekster-The%school:where+you@code:your-success$stories""
+   Output : Geekster The school where you code your success stories
+    */
+import java.util.Scanner;
+public class first {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a="Geekster-The%school:where+you@code:your-success$stories";
+		String b=removeSpacialChar(a);
+	
+		System.out.println(b);
+
+	}
+	public static String removeSpacialChar(String sentance)
+	{
+		 String b="";
+		for(int i=0;i<sentance.length();i++)
+		{
+			if(sentance.charAt(i)=='-'|| sentance.charAt(i)=='%' ||sentance.charAt(i)==':' ||sentance.charAt(i)=='+'||sentance.charAt(i)=='@'||sentance.charAt(i)=='$')
+			{
+				b=b+' ';
+			}
+			else
+			{
+				b=b+sentance.charAt(i);
+			}
+		}
+		return b;
+	}
+
+}
+
+
+   
+
+02)WAP to prove that intern() method guarantees to return unique String from from a String pool
+
+----->>>>package Feb_08;
+
+public class second {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+            
+		String a="Hanmant";
+		String b=new String("Hanmant");
+		
+		System.out.println("before intern "+a==b);
+		
+		System.out.println(a==b.intern());
+	}
+
+}
+
+
+03) Write a method which accepts 10 digits mobile number as an Integer parameter and return a string containing country code with mobile number.
+   Input: 7890765456
+   Output : ""+91-7890765456"";
+package Feb_08;
+import java.util.Scanner;
+public class thirdone {
+
+	public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter a mobile number");
+				String a=sc.nextLine();
+			
+				
+				String b="+91-";
+				String c=b+a;
+			  System.out.println(c);
+	
+	}
+
+}
+
+
+--->>>>>>
+   
+04)-- Write a method which accepts a String as a parameter and returns ratio of vowels to consonants in String format
+   Input: ""We are Proud to be an India""
+   Output : ""11:10"""
+--->>
+
+package Feb_08; /*
+   Write a method which accepts a String as a parameter and returns ratio of vowels to consonants in String format
+   Input: ""We are Proud to be an India""
+   Output : ""11:10"""  */
+
+public class fourthone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a="we are Proud to be an India";
+		int  vdigit=0;
+		int  cdigit=0;
+		ratioOfvowels(a);
+		
+
+	}
+	public static void ratioOfvowels(String b)
+	{
+		int vdigit=0;
+		int cdigit=0;
+		for(int i=0;i<b.length();i++)
+		{
+			if(b.charAt(i)=='a'||b.charAt(i)=='e'||b.charAt(i)=='i'||b.charAt(i)=='o'||b.charAt(i)=='u')
+			{
+				vdigit++;
+			}
+			else if(b.charAt(i)==' ')
+			{
+				continue;
+			}
+			else
+				cdigit++;
+		}
+		System.out.println(vdigit+":"+cdigit);
+	}
+
+}
+
+
+

@@ -1,0 +1,103 @@
+01)"make an array with user inputs of size 10. , then find sum of all elements in array
+--->>>
+
+package Feb_09;
+//make an array with user inputs of size 10. , then find sum of all elements in array
+import java.util.Scanner;
+
+public class firstone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+		int[] a=new int[10];
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.println("Enter a number: "+(i+1));
+			  a[i]=sc.nextInt();
+			
+		}
+		
+		int b=0;
+		for(int i=0;i<a.length;i++)
+		{
+			b=b+a[i];
+		}
+        System.out.println("sum of all elements of given array: "+b);
+	}
+
+}
+
+
+
+02)make an array with user inputs of size 10. , then find midle element in an array
+-->>>>
+package Feb_09;
+//make an array with user inputs of size 10. then print all positive numbers in an array"
+import java.util.Scanner;
+
+public class lastone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Scanner sc=new Scanner(System.in);
+		
+		int[] a=new int[10];
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.println("Enter a number: "+(i+1));
+			  a[i]=sc.nextInt();
+			
+		}
+		
+		int b=0;
+		for(int i=0;i<a.length;i++)
+		{
+			 if(a[i]==(a.length/2))
+			 {
+	         System.out.print("middele elements is: "+a[i]);
+
+			 }
+		}
+     
+
+	}
+
+}
+
+03)make an array with user inputs of size 10. then print all positive numbers in an array"
+--->>>
+
+package Feb_09;
+//make an array with user inputs of size 10. then print all positive numbers in an array"
+import java.util.Scanner;
+
+public class lastone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Scanner sc=new Scanner(System.in);
+		
+		int[] a=new int[10];
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.println("Enter a number: "+(i+1));
+			  a[i]=sc.nextInt();
+			
+		}
+		
+		int b=0;
+		for(int i=0;i<a.length;i++)
+		{
+			 if(a[i]>0)
+			 {
+	         System.out.print(a[i]+" ");
+
+			 }
+		}
+     
+
+	}
+
+}
