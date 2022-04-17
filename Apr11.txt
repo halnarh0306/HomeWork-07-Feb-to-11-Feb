@@ -1,0 +1,155 @@
+"""1.Given two arrays which are sorted in increasing order.
+Find the Union of two arrays
+A [3,5,6,8,9]
+B [5,7,9]
+
+Output - 3,5,6,8,9,7
+
+--->>     package Apr11_homeWork;
+
+public class firstone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = { 3, 5, 6, 8, 9 };
+		int[] b = { 5, 7, 9 };
+       
+		for(int i=0;i<a.length;i++)
+		System.out.print(a[i]+" ");
+		
+		if (a.length > b.length) {
+			for (int i = 0; i < b.length; i++) {
+				int index = binarySerch(a, b[i]);
+                
+				if (index == -1) {
+					System.out.println(b[i] + " ");
+				}
+			}
+		}
+		
+		else
+		{
+			for (int i = 0; i < a.length; i++) {
+				int index = binarySerch(b, a[i]);
+                
+				if (index == -1) {
+					System.out.println(b[i] + " ");
+				}
+			}
+		}
+			
+
+	}
+
+	private static int binarySerch(int[] a, int i) {
+		// TODO Auto-generated method stub
+
+		int s = 0;
+		int e = a.length - 1;
+		while (s <= e) {
+			int mid = s + (e - s) / 2;
+
+			if (a[mid] == i)
+				return mid;
+
+			else if (i < a[mid])
+				e = mid - 1;
+
+			else
+				s = mid + 1;
+
+		}
+		return -1;
+	}
+
+}
+
+
+2. Given an array of size N-1 such that it only contains distinct integers in the range of 1 to N. Find the missing element
+https://practice.geeksforgeeks.org/problems/missing-number-in-array1416/1
+
+---->>> package Apr11_homeWork;
+
+import java.awt.image.AreaAveragingScaleFilter;
+
+public class SecondOne {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = { 1, 2, 3, 5 };
+		int b = a[0];
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] != b) {
+				System.out.println(b);
+			}
+			b++;
+
+		}
+
+	}
+
+}
+
+
+3. Array Subset of another array 
+
+
+Given two arrays: a1[0..n-1] of size n and a2[0..m-1] of size m. Task is to check whether a2[] is a subset of a1[] or not. 
+Both the arrays can be sorted or unsorted. It may be assumed that elements in both array are distinct.
+
+https://practice.geeksforgeeks.org/problems/array-subset-of-another-array2317/1"""
+
+---->>> package Apr11_homeWork;
+
+public class a {
+	public static void main(String[] args) {
+
+		int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+		int[] b = { 2, 3, 4, 5 };
+		boolean c = true;
+
+		if (arr.length > b.length) {
+			for (int i = 0; i < b.length; i++) {
+				int index = binarySarch(arr, b[i]);
+                    //System.out.print(index+" ");
+				if (index == -1) {
+					c = false;
+					break;
+				}
+
+			}
+		} else {
+			for (int i = 0; i < b.length; i++) {
+				int index = binarySarch(arr, b[i]);
+
+				if (index == -1) {
+					c = false;
+					break;
+				}
+
+			}
+		}
+
+		System.out.print(c);
+	}
+
+	private static int binarySarch(int[] arr, int i) {
+		// TODO Auto-generated method stub
+		int start = 0;
+		int end = arr.length - 1;
+		while (start <= end) {
+			int mid = start + (end - start) / 2;
+
+			if (arr[mid] == i)
+				return mid;
+
+			else if (arr[mid] > i)
+				end = mid - 1;
+
+			else
+				start = mid + 1;
+		}
+
+		return -1;
+	}
+}
